@@ -8,7 +8,7 @@ def get_login_data(JWT_TOKEN, PAYLOAD):
     url = "https://clientbp.ggblueshark.com/GetLoginData"
     headers = {
         'X-Unity-Version': '2018.4.11f1',
-        'ReleaseVersion': 'OB51',
+        'ReleaseVersion': 'OB52',
         'Content-Type': 'application/x-www-form-urlencoded',
         'Expect': '100-continue',
         'Authorization': f'Bearer {JWT_TOKEN}',
