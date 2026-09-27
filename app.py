@@ -5,10 +5,10 @@ app = Flask(__name__)
 
 # دالة get_login_data
 def get_login_data(JWT_TOKEN, PAYLOAD):
-    url = "https://clientbp.ggblueshark.com/GetLoginData"
+    url = "https://clientbp.ppmainecoonghj.com/GetLoginData"
     headers = {
         'X-Unity-Version': '2018.4.11f1',
-        'ReleaseVersion': 'OB54',
+        'ReleaseVersion': 'OB55',
         'Content-Type': 'application/x-www-form-urlencoded',
         'Expect': '100-continue',
         'Authorization': f'Bearer {JWT_TOKEN}',
@@ -33,7 +33,7 @@ def get_login_data(JWT_TOKEN, PAYLOAD):
     except Exception as e:
         return {"error": str(e)}
 
-@app.route("/get/asses", methods=["GET"])
+@app.route("?token", methods=["GET"])
 def guest_token():
     uid = request.args.get("uid")
     password = request.args.get("password")
